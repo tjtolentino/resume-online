@@ -1,0 +1,22 @@
+{
+  "name": "resume-tolentino",
+  "version": "1.0.0",
+  "description": "Responsive & Presentable Web Resume for Thristan Jericho Tolentino",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "bun server.js",
+    "dev": "bun --watch server.js"
+  },
+  "keywords": [
+    "resume",
+    "azure",
+    "infrastructure",
+    "bun",
+    "html",
+    "css",
+    "tailwind"
+  ],
+  "author": "Thristan Jericho Tolentino",
+  "license": "MIT"
+}
