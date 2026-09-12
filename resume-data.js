@@ -11,7 +11,7 @@ const RESUME_DATA = {
   personal: {
     name: "THRISTAN JERICHO TOLENTINO",
     title: "Senior Infrastructure Administrator / Full Stack Developer",
-    subtitle: "Cloud Administrator/Engineer • Systems Automation • High Availability & Disaster Recovery",
+    subtitle: "Cloud Administrator/Engineer • Systems Automation • Web and Application Development",
     location: "Novaliches, Quezon City, Philippines",
     phone: "0905-808-8301",
     email: "jobs@tj.tolentino.email",
