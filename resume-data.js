@@ -310,19 +310,19 @@ const RESUME_DATA = {
 
   certifications: [
     {
-      name: "Microsoft Certified: AZ-900 - Azure Fundamentals",
+      name: "AZ-900 - Azure Fundamentals",
       issuer: "Microsoft",
       badge: "Azure Fundamentals",
       category: "Cloud"
     },
     {
-      name: "Microsoft Certified: AI-900 - Azure AI Fundamentals",
+      name: "AI-900 - Azure AI Fundamentals",
       issuer: "Microsoft",
       badge: "Azure AI",
       category: "AI & Cloud"
     },
     {
-      name: "Microsoft Certified: AZ-100 - Azure Infrastructure and Deployment",
+      name: "AZ-100 - Azure Infrastructure and Deployment",
       issuer: "Microsoft",
       badge: "Azure Deployment",
       category: "Cloud"
@@ -334,31 +334,31 @@ const RESUME_DATA = {
       category: "Governance"
     },
     {
-      name: "Philippine Coding Camp: Cloud Support Engineering (DevOps)",
+      name: "Cloud Support Engineering (DevOps)",
       issuer: "Philippine Coding Camp",
       badge: "DevOps",
       category: "DevOps"
     },
     {
-      name: "Google: Introduction to AI",
+      name: "Introduction to AI",
       issuer: "Google",
       badge: "AI Essentials",
       category: "AI & Cloud"
     },
     {
       name: "PowerShell Expert Training: PS Fundamentals & PowerShell for System Admins",
-      issuer: "Specialized Training",
+      issuer: "Microsoft",
       badge: "PowerShell Expert",
       category: "Automation"
     },
     {
-      name: "GovLearn.PH: Technical Writing – A Guide to Effective Office Communications",
+      name: "Technical Writing – A Guide to Effective Office Communications",
       issuer: "GovLearn.PH",
       badge: "Technical Writing",
       category: "Communication"
     },
     {
-      name: "Mapua Malayan: Full Stack Software Developer Professional Certificate",
+      name: "Full Stack Software Developer Professional Certificate",
       issuer: "Mapua Malayan",
       badge: "Full Stack Dev",
       category: "DevOps"
@@ -370,14 +370,14 @@ const RESUME_DATA = {
       category: "Infrastructure"
     },
     {
-      name: "Microsoft Intune Workshop",
-      issuer: "Microsoft Training",
+      name: "Intune Workshop",
+      issuer: "Specialized Training",
       badge: "Intune",
       category: "Infrastructure"
     },
     {
       name: "Microsoft Active Directory Administration",
-      issuer: "Microsoft Training",
+      issuer: "Specialized Training",
       badge: "Active Directory",
       category: "Infrastructure"
     },
@@ -385,7 +385,7 @@ const RESUME_DATA = {
       name: "TESDA: Computer Hardware Servicing II",
       issuer: "TESDA",
       badge: "TESDA NC II",
-      category: "Infrastructure"
+      category: "Hardware"
     }
   ],
 
