@@ -312,25 +312,25 @@ const RESUME_DATA = {
     {
       name: "AZ-900 - Azure Fundamentals",
       issuer: "Microsoft",
-      badge: "Azure Fundamentals",
+      badge: "Azure",
       category: "Cloud"
     },
     {
       name: "AI-900 - Azure AI Fundamentals",
       issuer: "Microsoft",
-      badge: "Azure AI",
+      badge: "AI",
       category: "AI & Cloud"
     },
     {
       name: "AZ-100 - Azure Infrastructure and Deployment",
       issuer: "Microsoft",
-      badge: "Azure Deployment",
+      badge: "Azure",
       category: "Cloud"
     },
     {
       name: "ITIL v4 Foundation Certified",
       issuer: "AXELOS",
-      badge: "ITIL v4",
+      badge: "ITIL",
       category: "Governance"
     },
     {
@@ -342,13 +342,13 @@ const RESUME_DATA = {
     {
       name: "Introduction to AI",
       issuer: "Google",
-      badge: "AI Essentials",
+      badge: "AI",
       category: "AI & Cloud"
     },
     {
       name: "PowerShell Expert Training: PS Fundamentals & PowerShell for System Admins",
       issuer: "Microsoft",
-      badge: "PowerShell Expert",
+      badge: "Automation",
       category: "Automation"
     },
     {
@@ -360,7 +360,7 @@ const RESUME_DATA = {
     {
       name: "Full Stack Software Developer Professional Certificate",
       issuer: "Mapua Malayan",
-      badge: "Full Stack Dev",
+      badge: "Development",
       category: "DevOps"
     },
     {
@@ -384,7 +384,7 @@ const RESUME_DATA = {
     {
       name: "TESDA: Computer Hardware Servicing II",
       issuer: "TESDA",
-      badge: "TESDA NC II",
+      badge: "TESDA",
       category: "Hardware"
     }
   ],
