@@ -293,13 +293,19 @@ function renderExperience(experience) {
               <div class="space-y-6">
                 ${comp.roles.map(role => `
                   <div class="role-block avoid-break">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
                       <h4 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
                         ${escapeHtml(role.title)}
                       </h4>
                       <span class="text-xs font-mono text-slate-500 dark:text-slate-400">${escapeHtml(role.period)}</span>
                     </div>
+
+                    ${role.description ? `
+                      <p class="role-description text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic mb-3 leading-relaxed pl-3 border-l-2 border-indigo-400/60">
+                        ${escapeHtml(role.description)}
+                      </p>
+                    ` : ''}
 
                     <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
                       ${role.highlights.map(item => `
@@ -640,7 +646,7 @@ function initLiveEdit() {
     editBtn.addEventListener('click', () => {
       isEditing = !isEditing;
       const editableElements = document.querySelectorAll(
-        '#person-name, #person-title, #person-location, #person-phone, #person-email, #summary-section p, .experience-bullet .bullet-text, .role-block h4'
+        '#person-name, #person-title, #person-location, #person-phone, #person-email, #summary-section p, .experience-bullet .bullet-text, .role-block h4, .role-description'
       );
 
       editableElements.forEach(el => {
@@ -699,9 +705,9 @@ function renderPaperSheets(data) {
   const manulifeComp = data.experience.find(e => e.company.includes('Manulife'));
   const manulifeHighlights = (manulifeComp && manulifeComp.roles && manulifeComp.roles[0]) ? manulifeComp.roles[0].highlights : [];
   
-  // Original PDF pagination: first 8 bullets on page 1, remaining on page 2
-  const manulifePage1Bullets = manulifeHighlights.slice(0, 8);
-  const manulifePage2Bullets = manulifeHighlights.slice(8);
+  // Original PDF pagination: first 7 bullets on page 1, remaining 3 on page 2
+  const manulifePage1Bullets = manulifeHighlights.slice(0, 7);
+  const manulifePage2Bullets = manulifeHighlights.slice(7);
 
   const teletechComp = data.experience.find(e => e.company.includes('TeleTech'));
   const etelecareComp = data.experience.find(e => e.company.includes('eTelecare'));
@@ -713,7 +719,7 @@ function renderPaperSheets(data) {
   sheet1.innerHTML = `
     <div class="a4-content">
       <!-- Candidate Main Header -->
-      <div class="text-center pb-2.5 mb-2.5 border-b-2 border-slate-900">
+      <div class="text-center pb-2.5 mb-2 border-b-2 border-slate-900">
         <h1 class="text-2xl font-black tracking-tight text-slate-950 uppercase font-sans">
           ${escapeHtml(data.personal.name)}
         </h1>
@@ -732,20 +738,20 @@ function renderPaperSheets(data) {
       </div>
 
       <!-- Professional Summary -->
-      <div class="mb-3">
+      <div class="mb-2.5">
         <h2 class="a4-section-title">Professional Summary</h2>
-        <p class="text-[8.8pt] leading-relaxed text-slate-800 text-justify">
+        <p class="text-[8.7pt] leading-relaxed text-slate-800 text-justify">
           ${escapeHtml(data.summary)}
         </p>
       </div>
 
       <!-- Core Technical Competencies -->
-      <div class="mb-3">
+      <div class="mb-2.5">
         <h2 class="a4-section-title">Core Technical Competencies</h2>
-        <div class="space-y-1 text-[8.5pt] text-slate-800">
+        <div class="space-y-1 text-[8.4pt] text-slate-800">
           ${data.competencies.map(c => `
             <div class="leading-tight">
-              <span class="font-bold text-slate-950 uppercase text-[8pt] tracking-wide">${escapeHtml(c.category)}:</span>
+              <span class="font-bold text-slate-950 uppercase text-[7.8pt] tracking-wide">${escapeHtml(c.category)}:</span>
               <span class="text-slate-700">${c.skills.map(s => escapeHtml(s)).join(', ')}</span>
             </div>
           `).join('')}
@@ -757,13 +763,18 @@ function renderPaperSheets(data) {
         <h2 class="a4-section-title">Professional Experience</h2>
         <div class="mt-1">
           <div class="flex justify-between items-baseline font-bold text-[9.5pt] text-slate-950">
-            <span>Manulife Business Processing Services</span>
-            <span class="font-mono text-[8.5pt] text-slate-600">2017 – 2025</span>
+            <span>${escapeHtml(manulifeComp.company)}</span>
+            <span class="font-mono text-[8.5pt] text-slate-600">${escapeHtml(manulifeComp.period)}</span>
           </div>
-          <div class="text-[8.5pt] italic font-semibold text-slate-700 mb-1">
-            Systems Administrator &gt; Senior Infrastructure Administrator
+          <div class="text-[8.5pt] italic font-semibold text-slate-700 mb-0.5">
+            ${escapeHtml(manulifeComp.roles[0].title)}
           </div>
-          <ul class="list-disc pl-4 space-y-1 text-[8.4pt] text-slate-800 leading-snug">
+          ${manulifeComp.roles[0].description ? `
+            <p class="text-[8pt] text-slate-600 italic mb-1 leading-snug">
+              ${escapeHtml(manulifeComp.roles[0].description)}
+            </p>
+          ` : ''}
+          <ul class="list-disc pl-4 space-y-1 text-[8.2pt] text-slate-800 leading-snug">
             ${manulifePage1Bullets.map(b => `<li>${escapeHtml(b.text)}</li>`).join('')}
           </ul>
         </div>
@@ -789,27 +800,32 @@ function renderPaperSheets(data) {
       </div>
 
       <!-- Manulife Continued -->
-      <div class="mb-2.5">
-        <ul class="list-disc pl-4 space-y-1 text-[8.4pt] text-slate-800 leading-snug">
+      <div class="mb-2">
+        <ul class="list-disc pl-4 space-y-1 text-[8.2pt] text-slate-800 leading-snug">
           ${manulifePage2Bullets.map(b => `<li>${escapeHtml(b.text)}</li>`).join('')}
         </ul>
       </div>
 
       <!-- TeleTech Philippines -->
       ${teletechComp ? `
-        <div class="mb-2.5 border-t border-slate-300 pt-1.5">
-          <div class="flex justify-between items-baseline font-bold text-[9.5pt] text-slate-950 mb-1">
+        <div class="mb-2 border-t border-slate-300 pt-1">
+          <div class="flex justify-between items-baseline font-bold text-[9.5pt] text-slate-950 mb-0.5">
             <span>${escapeHtml(teletechComp.company)}</span>
             <span class="font-mono text-[8.5pt] text-slate-600">${escapeHtml(teletechComp.period)}</span>
           </div>
-          <div class="space-y-2">
+          <div class="space-y-1.5">
             ${teletechComp.roles.map(role => `
               <div>
                 <div class="text-[8.5pt] font-semibold italic text-slate-800 flex justify-between">
                   <span>${escapeHtml(role.title)}</span>
                   <span class="font-mono not-italic text-[8pt] text-slate-600">${escapeHtml(role.period)}</span>
                 </div>
-                <ul class="list-disc pl-4 space-y-0.5 text-[8.3pt] text-slate-800 leading-snug mt-0.5">
+                ${role.description ? `
+                  <p class="text-[7.9pt] text-slate-600 italic leading-snug mb-0.5">
+                    ${escapeHtml(role.description)}
+                  </p>
+                ` : ''}
+                <ul class="list-disc pl-4 space-y-0.5 text-[8.1pt] text-slate-800 leading-snug">
                   ${role.highlights.map(h => `<li>${escapeHtml(h.text)}</li>`).join('')}
                 </ul>
               </div>
@@ -820,7 +836,7 @@ function renderPaperSheets(data) {
 
       <!-- eTelecare Global Solutions -->
       ${etelecareComp ? `
-        <div class="mb-2.5 border-t border-slate-300 pt-1.5">
+        <div class="mb-2 border-t border-slate-300 pt-1">
           <div class="flex justify-between items-baseline font-bold text-[9.5pt] text-slate-950">
             <span>${escapeHtml(etelecareComp.company)}</span>
             <span class="font-mono text-[8.5pt] text-slate-600">${escapeHtml(etelecareComp.period)}</span>
@@ -828,7 +844,12 @@ function renderPaperSheets(data) {
           <div class="text-[8.5pt] italic font-semibold text-slate-700 mb-0.5">
             ${escapeHtml(etelecareComp.roles[0].title)}
           </div>
-          <ul class="list-disc pl-4 text-[8.3pt] text-slate-800 leading-snug">
+          ${etelecareComp.roles[0].description ? `
+            <p class="text-[7.9pt] text-slate-600 italic leading-snug mb-0.5">
+              ${escapeHtml(etelecareComp.roles[0].description)}
+            </p>
+          ` : ''}
+          <ul class="list-disc pl-4 text-[8.1pt] text-slate-800 leading-snug">
             ${etelecareComp.roles[0].highlights.map(h => `<li>${escapeHtml(h.text)}</li>`).join('')}
           </ul>
         </div>
@@ -836,7 +857,7 @@ function renderPaperSheets(data) {
 
       <!-- STI College Santa Rosa (Work Experience) -->
       ${stiComp ? `
-        <div class="border-t border-slate-300 pt-1.5">
+        <div class="border-t border-slate-300 pt-1">
           <div class="flex justify-between items-baseline font-bold text-[9.5pt] text-slate-950">
             <span>${escapeHtml(stiComp.company)}</span>
             <span class="font-mono text-[8.5pt] text-slate-600">${escapeHtml(stiComp.period)}</span>
@@ -844,7 +865,12 @@ function renderPaperSheets(data) {
           <div class="text-[8.5pt] italic font-semibold text-slate-700 mb-0.5">
             ${escapeHtml(stiComp.roles[0].title)}
           </div>
-          <ul class="list-disc pl-4 text-[8.3pt] text-slate-800 leading-snug">
+          ${stiComp.roles[0].description ? `
+            <p class="text-[7.9pt] text-slate-600 italic leading-snug mb-0.5">
+              ${escapeHtml(stiComp.roles[0].description)}
+            </p>
+          ` : ''}
+          <ul class="list-disc pl-4 text-[8.1pt] text-slate-800 leading-snug">
             ${stiComp.roles[0].highlights.map(h => `<li>${escapeHtml(h.text)}</li>`).join('')}
           </ul>
         </div>

@@ -60,7 +60,7 @@ const RESUME_DATA = {
     }
   ],
 
-  summary: "Senior Infrastructure Administrator / Full Stack Developer with 15+ years of experience designing, migrating, automating, and supporting enterprise IT infrastructure. Led the migration of 100+ servers to Azure and engineered highly available Windows environments supporting 300,000+ automated tasks. Proven record of maintaining 99.98% infrastructure availability, reducing backup costs by 90% with projected annual savings of CAD$200K, and automating complex operational processes with PowerShell, C#, and Python. Strong background in Azure, Windows Server, Active Directory, disaster recovery, high availability, infrastructure automation, and technical leadership.",
+  summary: "Senior Azure Infrastructure Engineer with 15+ years of experience designing, migrating, automating, and supporting enterprise IT infrastructure. Led the migration of 100+ servers to Azure and engineered highly available Windows environments supporting 300,000+ automated tasks. Proven record of maintaining 99.98% infrastructure availability, reducing backup costs by 90% with projected annual savings of CAD$200K, and automating complex operational processes with PowerShell, C#, and Python. Strong background in Azure, Windows Server, Active Directory, disaster recovery, high availability, infrastructure automation, and technical leadership.",
 
   competencies: [
     {
@@ -82,7 +82,7 @@ const RESUME_DATA = {
       ]
     },
     {
-      category: "Automation & DevOps",
+      category: "Automation & Development",
       icon: "terminal",
       skills: [
         "PowerShell",
@@ -92,7 +92,12 @@ const RESUME_DATA = {
         "Terraform",
         "Git",
         "Batch Scripting",
-        "Docker"
+        "Docker",
+        "React",
+        "Express",
+        "NodeJS/Bun",
+        "PostgreSQL",
+        "MongoDB"
       ]
     },
     {
@@ -149,8 +154,9 @@ const RESUME_DATA = {
       isCurrentOrRecent: true,
       roles: [
         {
-          title: "Systems Administrator > Senior Infrastructure Administrator",
+          title: "Senior Infrastructure Administrator",
           period: "2017 – 2025",
+          description: "Orchestrated global enterprise cloud and on-premises infrastructure, directing large-scale Azure migrations, high-availability server clusters, and disaster recovery operations while automating operational workflows and driving cloud cost optimization.",
           highlights: [
             {
               text: "Led the successful migration of 100+ servers from on-premises to Azure, including high-availability (HA) file clusters, web farms, SFTP clusters, and Certificate Authority (CA) clusters.",
@@ -204,8 +210,9 @@ const RESUME_DATA = {
       isCurrentOrRecent: false,
       roles: [
         {
-          title: "Systems Software Engineer > Senior Systems Software Engineer",
+          title: "Senior Systems Software Engineer",
           period: "2015 – 2017",
+          description: "Engineered internal automation tools, diagnostics software, and identity provisioning systems to support global remote workforce readiness and streamline Active Directory access management.",
           highlights: [
             {
               text: 'Developed "Defender Fixer" to resolve workstation compatibility issues for remote applicants, preserving thousands of potential jobs and ensuring business continuity for work-at-home programs.',
@@ -224,8 +231,9 @@ const RESUME_DATA = {
           ]
         },
         {
-          title: "Associate Administrator > Supervisor, Systems Administration",
+          title: "Supervisor, Systems Administration",
           period: "2012 – 2015",
+          description: "Led a high-performing systems administration team, driving talent development while designing custom web applications to streamline applicant processing and operational incident tracking across global sites.",
           highlights: [
             {
               text: "Accelerated the career progression of 80% of the team into higher roles, leveraging their collective achievements and successful project completions.",
@@ -239,8 +247,9 @@ const RESUME_DATA = {
           ]
         },
         {
-          title: "Regional Technology Support Associate > Senior Specialist, Desktop Support",
+          title: "Senior Specialist, Desktop Support",
           period: "2010 – 2012",
+          description: "Delivered tier-3 desktop infrastructure support, incident recovery, and automated systems management, creating endpoint utility tools and energy-saving automation for 6,000+ workstations.",
           highlights: [
             {
               text: "Recovered a 300+ seat site from a major outage in under 24 hours, restoring production capabilities ahead of schedule.",
@@ -260,6 +269,7 @@ const RESUME_DATA = {
         {
           title: "Senior Technical Support Associate",
           period: "2009 – 2010",
+          description: "Provided advanced technical support and engineered custom web utilities to optimize agent workflow efficiency and reduce average handle times for enterprise telecom accounts.",
           highlights: [
             {
               text: 'Developed "Comet", a web-based customer status inquiry system for Telstra to improve tier 1 agents’ handling time during their calls.',
@@ -279,6 +289,7 @@ const RESUME_DATA = {
         {
           title: "Level 2 Resolutions Specialist",
           period: "2006 – 2009",
+          description: "Handled complex technical escalations and remote hardware/software diagnostics for enterprise clients, championing quality assurance and systematic root-cause resolution programs.",
           highlights: [
             {
               text: "Managed technical escalations and remote support; pioneered the Total Resolutions Program for Dell Small Business, establishing a career-long focus on continuous improvement and systematic problem-solving.",
@@ -297,6 +308,7 @@ const RESUME_DATA = {
         {
           title: "Systems Support Assistant",
           period: "2000 – 2003",
+          description: "Administered campus computer laboratory infrastructure, managed user authentication via Active Directory, and delivered hands-on technical support for hardware and software systems.",
           highlights: [
             {
               text: "Maintained computer labs and managed student accounts via Active Directory while providing foundational hardware and software support.",
@@ -310,19 +322,19 @@ const RESUME_DATA = {
 
   certifications: [
     {
-      name: "AZ-900 - Azure Fundamentals",
+      name: "Microsoft Certified: AZ-900 - Azure Fundamentals",
       issuer: "Microsoft",
       badge: "Azure",
       category: "Cloud"
     },
     {
-      name: "AI-900 - Azure AI Fundamentals",
+      name: "Microsoft Certified: AI-900 - Azure AI Fundamentals",
       issuer: "Microsoft",
       badge: "AI",
       category: "AI & Cloud"
     },
     {
-      name: "AZ-100 - Azure Infrastructure and Deployment",
+      name: "Microsoft Certified: AZ-100 - Azure Infrastructure and Deployment",
       issuer: "Microsoft",
       badge: "Azure",
       category: "Cloud"
@@ -334,13 +346,13 @@ const RESUME_DATA = {
       category: "Governance"
     },
     {
-      name: "Cloud Support Engineering (DevOps)",
+      name: "Philippine Coding Camp: Cloud Support Engineering (DevOps)",
       issuer: "Philippine Coding Camp",
       badge: "DevOps",
       category: "DevOps"
     },
     {
-      name: "Introduction to AI",
+      name: "Google: Introduction to AI",
       issuer: "Google",
       badge: "AI",
       category: "AI & Cloud"
@@ -352,13 +364,13 @@ const RESUME_DATA = {
       category: "Automation"
     },
     {
-      name: "Technical Writing – A Guide to Effective Office Communications",
+      name: "GovLearn.PH: Technical Writing – A Guide to Effective Office Communications",
       issuer: "GovLearn.PH",
       badge: "Technical Writing",
       category: "Communication"
     },
     {
-      name: "Full Stack Software Developer Professional Certificate",
+      name: "Mapua Malayan: Full Stack Software Developer Professional Certificate",
       issuer: "Mapua Malayan",
       badge: "Development",
       category: "DevOps"
@@ -370,14 +382,14 @@ const RESUME_DATA = {
       category: "Infrastructure"
     },
     {
-      name: "Intune Workshop",
-      issuer: "Specialized Training",
+      name: "Microsoft Intune Workshop",
+      issuer: "Microsoft Training",
       badge: "Intune",
       category: "Infrastructure"
     },
     {
       name: "Microsoft Active Directory Administration",
-      issuer: "Specialized Training",
+      issuer: "Microsoft Training",
       badge: "Active Directory",
       category: "Infrastructure"
     },
