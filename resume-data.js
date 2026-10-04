@@ -17,6 +17,8 @@ const RESUME_DATA = {
     email: "jobs@tj.tolentino.email",
     linkedin: "linkedin.com/in/thristanjericho",
     linkedinUrl: "https://www.linkedin.com/in/thristanjericho",
+    github: "github.com/tjtolentino",
+    githubUrl: "https://github.com/tjtolentino",
     yearsOfExperience: "15+",
   },
 
@@ -60,7 +62,7 @@ const RESUME_DATA = {
     }
   ],
 
-  summary: "Senior Azure Infrastructure Engineer with 15+ years of experience designing, migrating, automating, and supporting enterprise IT infrastructure. Led the migration of 100+ servers to Azure and engineered highly available Windows environments supporting 300,000+ automated tasks. Proven record of maintaining 99.98% infrastructure availability, reducing backup costs by 90% with projected annual savings of CAD$200K, and automating complex operational processes with PowerShell, C#, and Python. Strong background in Azure, Windows Server, Active Directory, disaster recovery, high availability, infrastructure automation, and technical leadership.",
+  summary: "Senior Infrastructure Administrator / Full Stack Developer with 15+ years of experience designing, migrating, automating, and supporting enterprise IT infrastructure. Led the migration of 100+ servers to Azure and engineered highly available Windows environments supporting 300,000+ automated tasks. Proven record of maintaining 99.98% infrastructure availability, reducing backup costs by 90% with projected annual savings of CAD$200K, and automating complex operational processes with PowerShell, C#, and Python. Strong background in Azure, Windows Server, Active Directory, disaster recovery, high availability, infrastructure automation, and technical leadership.",
 
   competencies: [
     {
