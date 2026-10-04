@@ -1,12 +1,3 @@
-/**
- * RESUME DATA CONFIGURATION
- * ==============================================================================
- * To update your resume, simply edit the values in this file!
- * All fields are plain text, lists, or structured objects.
- * Changes will automatically reflect in the web resume and print view.
- * ==============================================================================
- */
-
 const RESUME_DATA = {
   personal: {
     name: "THRISTAN JERICHO TOLENTINO",
@@ -18,7 +9,7 @@ const RESUME_DATA = {
     linkedin: "linkedin.com/in/thristanjericho",
     linkedinUrl: "https://www.linkedin.com/in/thristanjericho",
     github: "github.com/tjtolentino",
-    githubUrl: "https://github.com/tjtolentino",
+    githubUrl: "https://resume.ozom.cc",
     yearsOfExperience: "15+",
   },
 
