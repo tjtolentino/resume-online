@@ -426,11 +426,11 @@ const RESUME_DATA = {
     degrees: [
       {
         title: "Bachelor of Science in Computer Science",
-        year: "2003"
+        year: "2004 ~"
       },
       {
         title: "Associate in Computer Studies",
-        period: "2000 – 2003"
+        period: "2000 ~ 2003"
       }
     ],
     honors: [
