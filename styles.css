@@ -9,61 +9,61 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Theme Tokens: Light Mode Defaults */
-  --bg-main: #f8fafc;
+  /* Theme Tokens: Light Mode Defaults (Clean Modern Neutral) */
+  --bg-main: #f8f9fa;
   --bg-surface: #ffffff;
-  --bg-surface-elevated: #f1f5f9;
-  --bg-surface-glass: rgba(255, 255, 255, 0.82);
-  --border-color: #e2e8f0;
-  --border-subtle: #f1f5f9;
+  --bg-surface-elevated: #f4f4f5;
+  --bg-surface-glass: rgba(255, 255, 255, 0.88);
+  --border-color: #e4e4e7;
+  --border-subtle: #f4f4f5;
   
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --text-primary: #09090b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
   
   --accent-primary: #0284c7;       /* Azure Blue */
   --accent-primary-hover: #0369a1;
-  --accent-secondary: #4f46e5;     /* Tech Indigo */
+  --accent-secondary: #0891b2;     /* Ocean Cyan (Clean modern accent, zero purple) */
   --accent-emerald: #059669;       /* Uptime & Success */
   --accent-amber: #d97706;         /* Highlights */
 
-  --tag-bg: #e0f2fe;
-  --tag-text: #0369a1;
+  --tag-bg: #f0f9ff;
+  --tag-text: #0284c7;
   --tag-border: #bae6fd;
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 0 25px -5px rgba(2, 132, 199, 0.2);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 14px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 14px 28px -4px rgba(0, 0, 0, 0.08), 0 6px 12px -4px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 0 25px -5px rgba(2, 132, 199, 0.15);
 }
 
-/* Dark Mode Tokens */
+/* Dark Mode Tokens: Pure Neutral Graphite / Obsidian (Zero purplish/bluish tint) */
 html.dark {
-  --bg-main: #090d16;
-  --bg-surface: #111726;
-  --bg-surface-elevated: #1a2236;
-  --bg-surface-glass: rgba(17, 23, 38, 0.85);
-  --border-color: #1e293b;
-  --border-subtle: #172033;
+  --bg-main: #0c0d0e;              /* Deep neutral charcoal/obsidian */
+  --bg-surface: #141618;           /* Neutral dark card surface */
+  --bg-surface-elevated: #1c1e21;  /* Elevated card surface */
+  --bg-surface-glass: rgba(18, 20, 23, 0.85);
+  --border-color: #24272c;         /* Pure neutral border */
+  --border-subtle: #1a1c1f;
   
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --text-primary: #f4f4f5;         /* Crisp neutral off-white */
+  --text-secondary: #a1a1aa;       /* Neutral silver text */
+  --text-muted: #71717a;           /* Muted neutral */
   
-  --accent-primary: #38bdf8;       /* Glowing Sky */
+  --accent-primary: #38bdf8;       /* Clean Sky Azure */
   --accent-primary-hover: #7dd3fc;
-  --accent-secondary: #818cf8;
+  --accent-secondary: #22d3ee;     /* Clean Cyan (Zero purple) */
   --accent-emerald: #34d399;
   --accent-amber: #fbbf24;
 
-  --tag-bg: rgba(56, 189, 248, 0.12);
-  --tag-text: #7dd3fc;
-  --tag-border: rgba(56, 189, 248, 0.25);
+  --tag-bg: rgba(56, 189, 248, 0.1);
+  --tag-text: #38bdf8;
+  --tag-border: rgba(56, 189, 248, 0.22);
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 30px -5px rgba(56, 189, 248, 0.25);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 16px -1px rgba(0, 0, 0, 0.6), 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 14px 30px -4px rgba(0, 0, 0, 0.7), 0 6px 12px -4px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px -5px rgba(56, 189, 248, 0.18);
 }
 
 /* Base Body & Reset */
@@ -77,7 +77,8 @@ body {
   color: var(--text-primary);
   margin: 0;
   padding: 0;
-  line-height: 1.55;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.25s ease, color 0.25s ease;
@@ -85,15 +86,15 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-main);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border-color);
-  border-radius: 4px;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-primary);
@@ -102,8 +103,8 @@ body {
 /* Glassmorphism & Surface utilities */
 .glass-panel {
   background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-color);
 }
 
@@ -111,12 +112,12 @@ body {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .surface-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(56, 189, 248, 0.4);
+  border-color: rgba(56, 189, 248, 0.35);
 }
 
 /* Glow Badge & Gradient Text */
@@ -147,7 +148,7 @@ body {
 .highlight-match {
   outline: 2px solid var(--accent-primary) !important;
   background-color: rgba(56, 189, 248, 0.12) !important;
-  transform: scale(1.02);
+  transform: scale(1.015);
   transition: all 0.2s ease;
 }
 
@@ -155,11 +156,11 @@ body {
   background-color: var(--accent-primary) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.45);
 }
 
 .dimmed {
-  opacity: 0.35;
+  opacity: 0.3;
   transition: opacity 0.2s ease;
 }
 
@@ -187,18 +188,19 @@ body {
 
 /* Clean Paper View Mode (Desk background with distinct white A4 pages) */
 body.view-paper {
-  background-color: #94a3b8 !important;
-  color: #0f172a !important;
+  background-color: #cbd5e1 !important;
+  color: #09090b !important;
 }
 
 html.dark body.view-paper {
-  background-color: #0f172a !important;
+  background-color: #121316 !important;
+  color: #f4f4f5 !important;
 }
 
 body.view-paper .main-container {
   max-width: 100% !important;
-  padding-top: 16px !important;
-  padding-bottom: 40px !important;
+  padding-top: 24px !important;
+  padding-bottom: 48px !important;
 }
 
 /* Individual A4 Page Wrappers & Tags */
@@ -216,17 +218,17 @@ body.view-paper .main-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4px 6px 4px;
+  padding: 0 6px 10px 6px;
   font-size: 11px;
   font-family: var(--font-mono);
   font-weight: 700;
-  color: #334155;
+  color: #52525b;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 html.dark .a4-sheet-tag {
-  color: #94a3b8;
+  color: #a1a1aa;
 }
 
 /* Standard A4 Paper Dimensions: 210mm wide x 297mm high */
@@ -237,9 +239,9 @@ html.dark .a4-sheet-tag {
   max-height: 297mm;
   max-width: 100%;
   background: #ffffff !important;
-  color: #0f172a !important;
+  color: #09090b !important;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22), 0 3px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #cbd5e1;
+  border: 1px solid #d4d4d8;
   border-radius: 2px;
   padding: 13mm 16mm 10mm 16mm;
   box-sizing: border-box;
@@ -260,19 +262,19 @@ html.dark .a4-sheet-tag {
   flex-shrink: 0;
   padding-top: 5px;
   margin-top: 6px;
-  border-top: 1px solid #cbd5e1;
+  border-top: 1px solid #e4e4e7;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 8pt;
   font-family: var(--font-mono);
-  color: #64748b;
+  color: #71717a;
 }
 
 .a4-header-mini {
   padding-bottom: 4px;
   margin-bottom: 8px;
-  border-bottom: 1.5px solid #0f172a;
+  border-bottom: 1.5px solid #09090b;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -283,8 +285,8 @@ html.dark .a4-sheet-tag {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #0f172a;
-  border-bottom: 1.5px solid #0f172a;
+  color: #09090b;
+  border-bottom: 1.5px solid #09090b;
   padding-bottom: 2px;
   margin-top: 9px;
   margin-bottom: 5px;

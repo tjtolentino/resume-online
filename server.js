@@ -3,6 +3,7 @@ import { file } from "bun";
 const PORT = Number(process.env.PORT) || 3000;
 
 const server = Bun.serve({
+  hostname: "0.0.0.0",
   port: PORT,
   fetch(req) {
     const url = new URL(req.url);
