@@ -149,7 +149,7 @@ const RESUME_DATA = {
         {
           title: "Senior Infrastructure Administrator",
           period: "2017 – 2025",
-          description: "Orchestrated global enterprise cloud and on-premises infrastructure, directing large-scale Azure migrations, high-availability server clusters, and disaster recovery operations while automating operational workflows and driving cloud cost optimization.",
+          description: "Orchestrated global enterprise cloud and on-premises infrastructure by leading end-to-end projects as a technical consultant and Subject Matter Expert (SME) for junior colleagues, and ensuring the system reliability of multiple critical server clusters. Responsibilities include driving large-scale Azure migrations and disaster recovery operations, automating processes to streamline operational workflows and reduce cloud costs, and enforcing strict procedures while managing compliance audits and generating executive management reports.",
           highlights: [
             {
               text: "Led the successful migration of 100+ servers from on-premises to Azure, including high-availability (HA) file clusters, web farms, SFTP clusters, and Certificate Authority (CA) clusters.",
@@ -205,7 +205,7 @@ const RESUME_DATA = {
         {
           title: "Senior Systems Software Engineer",
           period: "2015 – 2017",
-          description: "Engineered internal automation tools, diagnostics software, and identity provisioning systems to support global remote workforce readiness and streamline Active Directory access management.",
+          description: "Engineered internal automation tools, diagnostics software, and identity provisioning systems to support global remote workforce readiness and streamline Active Directory access management. Provide backend systems support for various application platforms, APIs and databases.",
           highlights: [
             {
               text: 'Developed "Defender Fixer" to resolve workstation compatibility issues for remote applicants, preserving thousands of potential jobs and ensuring business continuity for work-at-home programs.',
@@ -226,7 +226,7 @@ const RESUME_DATA = {
         {
           title: "Supervisor, Systems Administration",
           period: "2012 – 2015",
-          description: "Led a high-performing systems administration team, driving talent development while designing custom web applications to streamline applicant processing and operational incident tracking across global sites.",
+          description: "Led a high-performing systems administration team to drive talent development, designing custom web applications to streamline applicant processing and operational incident tracking across global sites, while ensuring all operational SLAs are consistently met. Responsibilities include managing Identity and Access Management (IAM), Active Directory, and GPOs, standardizing global access policies, and conducting rigorous compliance audits.",
           highlights: [
             {
               text: "Accelerated the career progression of 80% of the team into higher roles, leveraging their collective achievements and successful project completions.",
@@ -426,11 +426,11 @@ const RESUME_DATA = {
     degrees: [
       {
         title: "Bachelor of Science in Computer Science",
-        year: "2004 ~"
+        year: "2004"
       },
       {
         title: "Associate in Computer Studies",
-        period: "2000 ~ 2003"
+        period: "2000-2003"
       }
     ],
     honors: [
