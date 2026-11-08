@@ -1,4 +1,4 @@
-# Modern Responsive Web Resume
+# Modern Responsive Web Resume 2
 **Thristan Jericho Tolentino — Senior Infrastructure Administrator / Full Stack Developer**
 
 A modern, responsive, high-aesthetic web resume and executive portfolio built with semantic HTML5, vanilla CSS/Tailwind, and vanilla JavaScript. Zero framework overhead, zero build step required, 100% compatible with static hosting like GitHub Pages.
